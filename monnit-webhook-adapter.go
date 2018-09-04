@@ -5,7 +5,6 @@ import (
 	"encoding/json"
 	"flag"
 	cb "github.com/clearblade/Go-SDK"
-	mqtt "github.com/clearblade/paho.mqtt.golang"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -121,8 +120,6 @@ func validateFlags() {
 }
 
 func main() {
-	mqtt.DEBUG = log.New(os.Stdout, "", 0)
-	mqtt.ERROR = log.New(os.Stdout, "", 0)
 	flag.Usage = usage
 	validateFlags()
 
